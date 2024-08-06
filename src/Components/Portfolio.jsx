@@ -1,5 +1,6 @@
 import React from "react";
 import { assets, myWorks } from "../assets/assets.js";
+import {Link} from "react-router-dom"
 
 const Portfolio = () => {
   return (
@@ -17,8 +18,8 @@ const Portfolio = () => {
               return ( // Add return statement here
                <>
                 <div className="w-[30%] h-full rounded-xl overflow-hidden relative" key={i}>
-                    <img src={work.image} alt="" className="w-full h-full" />
-                    {/* <div className="w-full h-full absolute top-0 bg-[#0000006c]"></div> */}
+                    <a href={work.hostlink} target="_blank"><img src={work.image} alt="" className="w-full h-full" /></a>
+                    <div className="w-full h-full absolute top-0 bg-[#0000006c]"></div>
                 </div>
                </>
               );

@@ -34,26 +34,32 @@ export const myWorks = [
   {
     category: "frontend",
     image: punjab,
+    hostlink:"https://chokha-punjab-clone.onrender.com/"
   },
   {
     category: "frontend",
     image: atg,
+    hostlink:"https://assignment-atg.onrender.com/"
   },
   {
     category: "backend",
     image: sph,
+    hostlink:"https://sph-1.onrender.com/"
   },
   {
     category: "frontend",
     image: bubble,
+    hostlink:"https://bubblegame-ors1.onrender.com"
   },
   {
     category: "backend",
     image: event,
+    hostlink:"https://event-360-teg8.onrender.com/"
   },
   {
     category: "Figma Design",
     image: figma,
+    hostlink:"https://www.figma.com/design/3ODMWVzdgQ8ipsv7cmExSO/Student-Project-Hub"
   },
 
 ];
