@@ -19,7 +19,7 @@ const Portfolio = () => {
                <>
                 <div className="w-[30%] h-full rounded-xl overflow-hidden relative" key={i}>
                     <img src={work.image} alt="" className="w-full h-full" />
-                    <a href={work.hostlink} target="_blank"><div className="w-full h-full absolute top-0 bg-[#0000006c]"></div></a>
+                    <a href={work.hostlink} target="_blank"><div className="w-full h-full absolute top-0 bg-[#0000003f]"></div></a>
                 </div>
                </>
               );
