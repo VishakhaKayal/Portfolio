@@ -1,0 +1,44 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+ text-align: center; 
+} */
+
+
+/* Header Component hover css */
+.nav h4::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.75);
+  left: 0;
+  bottom: -100%;
+  border-radius: 50px;
+  transition: all 0.3s ease-out;
+}
+.nav h4:hover::after {
+  bottom: 0;
+  color: white;
+}
+.nav h4:hover a{
+  color: black;
+}
+
+
+/* Home Component animation */
+.animateIcons{
+  animation: updown 2s ease infinite;
+}
+@keyframes updown{
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
