@@ -16,6 +16,7 @@ import event from "./images/EVENT.png";
 import atg from "./images/ATG.png";
 import figma from "./images/Figma_design.png";
 import bubble from "./images/bubble.png";
+import pinterest from "./images/pinterest.png";
 
 export const assets = {
   mongo,
@@ -40,6 +41,11 @@ export const myWorks = [
     category: "backend",
     image: sph,
     hostlink: "https://sph-1.onrender.com/",
+  },
+  {
+    category: "backend",
+    image: pinterest,
+    hostlink: "https://backendpinterest.onrender.com/",
   },
   {
     category: "frontend",
