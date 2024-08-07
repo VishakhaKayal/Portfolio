@@ -5,7 +5,7 @@ import Button from "./Button.jsx";
 
 const Portfolio = () => {
   const [seeMore, setSeeMore] = useState(false);
-  const handleProjects = () => {
+  const handleButton = () => {
     console.log("clicked");
     setSeeMore(true)
   };
@@ -13,7 +13,7 @@ const Portfolio = () => {
     <>
       <div className="w-full min-h-screen flex items-center">
         <div
-          className="text-white bg-[#101010] w-full h-[80%] flex flex-col gap-4 z-99 relative"
+          className="text-white py-5 bg-[#101010] w-full h-[80%] flex flex-col gap-4 z-99 relative"
           id="portfolio"
         >
           <h2 className="text-5xl font-bold mb-4">My Works</h2>
@@ -47,7 +47,7 @@ const Portfolio = () => {
                   })
             }
           </div>
-          <Button name="See More" handleProjects={handleProjects}></Button>
+          <Button name="See More" handleButton={handleButton}></Button>
         </div>
       </div>
     </>
