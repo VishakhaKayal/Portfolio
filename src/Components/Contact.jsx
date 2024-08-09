@@ -26,6 +26,9 @@ const Contact = () => {
         }
         // console.log(error.text);
       });
+      setName("");
+      setEmail("");
+      setMessage("")
   };
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -58,6 +61,7 @@ const Contact = () => {
               className="w-[60%]  px-3 py-3 mb-3 bg-[#282828] rounded-xl"
               value={email}
               onChange={(e) => { setEmail(e.target.value) }}
+              autoComplete="on"
             />
             <textarea
               name="message"
