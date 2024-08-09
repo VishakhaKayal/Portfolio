@@ -9,40 +9,38 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-
-  useGSAP(()=>{
-    gsap.from(".aboutmeContent",{
-      opacity:0,
-      duration:2,
-      scrollTrigger:{
-        trigger : "#about",
-        start: "top center",
-      }
-    })
-    gsap.from("aside img",{
-      opacity:0,
-      duration:2,
-      scale:0,
-      scrollTrigger:{
-        trigger : "#about",
-                        end: "bottom center",
-      }
-    })
-  })
+  useGSAP(() => {
+    gsap.from(".aboutmeContent", {
+      opacity: 0,
+      duration: 0.3,
+      scrollTrigger: {
+        trigger: "#about",
+        // start: "top center",
+      },
+    });
+    gsap.from("aside img", {
+      opacity: 0,
+      duration: 1,
+      scale: 0,
+      scrollTrigger: {
+        trigger: "#about",
+        // end: "bottom center",
+      },
+    });
+  });
 
   const onHandleEducation = () => {};
   return (
-    <div className="w-full h-screen flex items-center">
+    <div className="w-full h-screen flex items-center" id="about">
       <div
-        className="text-white bg-[#101010] w-full min-h-[calc(100vh-35vh)] md:h-[calc(100vh-35vh)] flex md:flex-row flex-col gap-4 z-99 relative"
-        id="about"
+        className="text-white  w-full min-h-[calc(100vh-35vh)] md:h-[calc(100vh-35vh)] flex md:flex-row flex-col gap-4 z-99 relative"
+        
       >
-        <aside  className="w-full md:w-[35%] h-full rounded-lg overflow-hidden">
+        <aside className="w-full md:w-[35%] h-full rounded-lg overflow-hidden">
           <img
             src={assets.girl}
             alt="My Name Is Vishakha Kayal"
             className="w-[60%] md:w-full h-full m-auto md:m-0"
-
           />
         </aside>
         <aside className="w-full md:w-[65%] h-full pl-11 pt-3">
@@ -60,18 +58,18 @@ const About = () => {
           </p>
           <div className="flex flex-col mt-4">
             <div className="flex  gap-5 font-[Poppins] tracking-wider font-semibold text-3xl md:text-lg">
-              <h4 className="border-[3px] border-[#101010] pb-1 border-b-[#1E2824] ">
+              <h4 className="border-[3px] border-[#000000] pb-1 border-b-[#1E2824] ">
                 Skills
               </h4>
               <h4
-                className="pb-1 border-[3px] border-[#101010] cursor-pointer"
+                className="pb-1 border-[3px] border-[#000000] cursor-pointer"
                 onClick={onHandleEducation}
               >
                 Education
               </h4>
             </div>
-       
-       <Skills/>
+
+            <Skills />
           </div>
         </aside>
       </div>

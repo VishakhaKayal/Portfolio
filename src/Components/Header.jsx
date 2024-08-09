@@ -35,7 +35,7 @@ const Header = () => {
           href="#portfolio"
           className="font-medium text text-white relative z-[9] no-underline"
         >
-          Portfolio
+          MyWorks
         </a>
       </h4>
       <h4 className="relative rounded-[50px]  border-[1px] border-[rgba(255,255,255,0.75)] pt-[1.3vh] pb-[1.3vh] pl-[1.3vw] pr-[1.3vw] cursor-pointer overflow-hidden">

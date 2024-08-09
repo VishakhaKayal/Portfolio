@@ -33,38 +33,45 @@ export const assets = {
 
 export const myWorks = [
   {
-    category: "backend",
+    id:0,
+    category: "backend project",
     image: event,
     hostlink: "https://event-360-teg8.onrender.com/",
   },
   {
-    category: "backend",
+    id:1,
+    category: "backend project",
     image: sph,
     hostlink: "https://sph-1.onrender.com/",
   },
   {
-    category: "backend",
+    id:2,
+    category: "backend project",
     image: pinterest,
     hostlink: "https://backendpinterest.onrender.com/",
   },
   {
-    category: "frontend",
+    id:3,
+    category: "frontend project",
     image: atg,
     hostlink: "https://assignment-atg.onrender.com/",
   },
   {
-    category: "frontend",
+    id:4,
+    category: "frontend project",
     image: punjab,
     hostlink: "https://chokha-punjab-clone.onrender.com/",
   },
 
   {
-    category: "frontend",
+    id:5,
+    category: "frontend project",
     image: bubble,
     hostlink: "https://bubblegame-ors1.onrender.com",
   },
 
   {
+    id:6,
     category: "Figma Design",
     image: figma,
     hostlink:

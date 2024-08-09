@@ -21,23 +21,25 @@ const Home = () => {
       style={{
         filter: "drop-shadow(20px 4px 40px rgba(0, 0, 0, 0.25))",
         backdropFilter: "blur(2.5px)",
+        
       }}
-      className="text-white bg-[#101010] w-full mt-[6rem] h-[calc(100vh-25vh)] flex gap-4 z-99 relative"
+      className="text-white bg-[] w-full mt-[6rem] h-[calc(100vh-25vh)] flex gap-4 z-99 relative"
     >
      
-      <section className="introsection w-[60%] h-full flex flex-col justify-center border-[1px] rounded-lg border-[#464545a7] gap-5 relative pl-8">
-        <h2 className="font-[Poppins] text-[#626262] text-lg font-medium tracking-[2.56px]">
+      <section style={{background: "linear-gradient(to right, #434343 0%, black 100%"}} className="introsection w-[60%] h-full flex flex-col justify-center border-[1px] rounded-lg border-[#464545a7] gap-5 relative pl-8">
+        <h2 className="font-[Roboto Mono] text-[#4a4a48] text-lg font-medium tracking-[2.56px]">
           Hi, I am Vishakha
         </h2>
         <h2 className="font-[Poppins] text-[#fffff] text-7xl font-medium tracking-[1.26px] whitespace-nowrap">
           FULLSTACK
         </h2>
-        <h2 className="font-[Poppins] text-[#2b3531] text-7xl font-medium tracking-[2.56px]">
+        <h2 className="font-[Poppins] text-[#566246] text-7xl font-medium tracking-[2.56px]">
           WEB DEVELOPER
         </h2>
       </section>
 
-      <section className="animationSection w-[40%] border-[1px] rounded-lg border-[#464545a7] relative">
+      <section className="animationSection w-[40%] border-[1px] rounded-lg border-[#464545a7] relative"
+      style={{background:"radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%)",}}>
       {/* <div className="bg-white w-full h-full absolute"></div> */}
         <h3 className="reactIcon">
           {" "}

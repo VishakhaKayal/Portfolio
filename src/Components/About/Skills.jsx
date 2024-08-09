@@ -8,46 +8,46 @@ const Skills = () => {
     t1.from(".skillsDiv div",{
         scale:0,
         opacity:0,
-        duration:2
+        duration:1
     })
     t1.from(".frontend h3", {
       opacity: 0,
-      duration: 1,
+      duration: 0.9,
       stagger: 0.3,
     }).from(
       ".frontend p",
       {
         y: 100,
         opacity: 0,
-        duration: 1,
+        duration: 0.9,
         stagger: 0.3,
       },
       "-=1"
     );
     t1.from(".backend h3", {
       opacity: 0,
-      duration: 1,
+      duration: 0.9,
       stagger: 0.3,
     }).from(
       ".backend p",
       {
         y: 100,
         opacity: 0,
-        duration: 1,
+        duration: 0.9,
         stagger: 0.3,
       },
       "-=1"
     );
     t1.from(".otherSkills h3", {
       opacity: 0,
-      duration: 1,
+      duration: 0.9,
       stagger: 0.3,
     }).from(
       ".otherSkills p",
       {
         y: 100,
         opacity: 0,
-        duration: 1,
+        duration: 0.9,
         stagger: 0.3,
       },
       "-=1"
