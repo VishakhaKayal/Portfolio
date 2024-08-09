@@ -82,7 +82,7 @@
 /* Add this to your CSS file */
 .projectDiv {
   transform: perspective(1000px) rotateX(0deg);
-  transform-origin:bottom ;
+  transform-origin:center ;
   transition: transform 2s ease-in-out;
 }
 
