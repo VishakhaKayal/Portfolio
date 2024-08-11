@@ -88,25 +88,7 @@
   html,body{
     font-size: 65%;
   }
-  
-  .reactIcon {
-    display: block;
-    position: absolute;
-    top: 30%;
-    left:21%;
-    font-size: 3rem;
-  }
-  .tailwindicon {
-    bottom: 25%;
-  }
 
-  .nodeicon {
-    top: 43%;
-    right: 0;
-  }
-  .mongoicon{
-    left:0;
-  }
 }
 
 /* #484848 */

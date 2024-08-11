@@ -3,33 +3,32 @@ import { assets } from "../../assets/assets";
 import Education from "./Education";
 import Skills from "./Skills";
 import { useGSAP } from "@gsap/react";
+import Heading from "../Heading";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Heading from "../Heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const [section, setSection] = useState("");
+  const [section, setSection] = useState("Skills");
 
   useGSAP(() => {
-    gsap.from(".aboutmeContent", {
-      opacity: 0,
-      duration: 10,
+    gsap.to(".aboutmeContent", {
+      opacity: 1,
+      x: 0,
+      duration: 3.4,
       scrollTrigger: {
         trigger: "#about",
         scrub: 1,
-        // start: "top center",
       },
     });
     gsap.from("aside img", {
       opacity: 0,
-      duration: 1,
+      duration: 0.4,
       scale: 0,
       scrollTrigger: {
         trigger: "#about",
         scrub: 1,
-        // end: "bottom center",
       },
     });
   });
@@ -53,7 +52,7 @@ const About = () => {
         <aside className="w-full md:w-[65%] h-full pl-11 pt-3">
           {/* <h2 className="text-6xl md:text-5xl font-bold ">About Me</h2> */}
           <Heading sectionName="About" />
-          <p className="aboutmeContent text-lg md:text-sm text-[#ffffff7d] mt-4 font-[Inter] tracking-wider">
+          <p className="aboutmeContent text-lg md:text-sm text-[#ffffff7d] mt-4 font-[Inter] tracking-wider opacity-0 -translate-x-14">
             I’m a dedicated MERN Stack developer with a strong passion for
             crafting dynamic and innovative web applications. My journey into
             web development started with a fascination for frontend
@@ -66,13 +65,18 @@ const About = () => {
           </p>
           <div className="flex flex-col mt-4">
             <div className="flex  gap-5 font-[Poppins] tracking-wider font-semibold text-3xl md:text-lg">
-              <h4 className="border-[3px] border-[#000000] pb-1 border-b-[#1E2824] "
-               onClick={onHandleSkills}
-               >
+              <h4
+                className={`${
+                  section === "Skills" ? "border-b-[#1E2824]" : ""
+                } pb-1 border-[3px] border-[#000000] cursor-pointer`}
+                onClick={onHandleSkills}
+              >
                 Skills
               </h4>
               <h4
-                className="pb-1 border-[3px] border-[#000000] cursor-pointer"
+                className={`${
+                  section === "Education" ? "border-b-[#1E2824]" : ""
+                } pb-1 border-[3px] border-[#000000] cursor-pointer`}
                 onClick={onHandleEducation}
               >
                 Education

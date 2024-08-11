@@ -18,7 +18,7 @@ const Portfolio = () => {
         
         >
           <Heading sectionName="My Works"/>
-          <div className="grid grid-cols-1  md:flex md:flex-wrap justify-center gap-11 md:w-full h-full overflow-hidden py-6">
+          <div className="grid grid-cols-1 md:flex md:flex-wrap justify-center gap-11 md:w-full h-full overflow-hidden py-6">
             {myWorks.slice(0, 3).map((work, i) => {
               return (
                 <Project project={work} key={work.id} i={i}/>

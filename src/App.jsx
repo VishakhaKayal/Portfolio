@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <main className="w-[100%] min-h-screen" >
+      <main className="w-[100%] min-h-screen " >
         <Header />
         <Home />
         <Portfolio />

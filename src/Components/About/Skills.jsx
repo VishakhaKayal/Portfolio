@@ -4,51 +4,74 @@ import { useGSAP } from "@gsap/react";
 
 const Skills = () => {
   useGSAP(() => {
-    const t1 = gsap.timeline(); // Creating a timeline instance
-    t1.from(".skillsDiv div",{
-        scale:0,
-        opacity:0,
-        duration:1
+    gsap.from(".skillsDiv div", {
+      scale: 0,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#about",
+      },
     })
-    t1.from(".frontend h3", {
+    gsap.from(".frontend h3", {
       opacity: 0,
       duration: 0.9,
       stagger: 0.3,
-    }).from(
+      scrollTrigger: {
+        trigger: "#about",
+      },
+    })
+    gsap.from(
       ".frontend p",
       {
         y: 100,
         opacity: 0,
         duration: 0.9,
         stagger: 0.3,
+        scrollTrigger: {
+        trigger: "#about",
+      },
       },
       "-=1"
     );
-    t1.from(".backend h3", {
+    gsap.from(".backend h3", {
       opacity: 0,
       duration: 0.9,
       stagger: 0.3,
-    }).from(
+      scrollTrigger: {
+        trigger: "#about",
+      },
+    })
+    gsap.from(
       ".backend p",
       {
         y: 100,
         opacity: 0,
         duration: 0.9,
         stagger: 0.3,
+        scrollTrigger: {
+        trigger: "#about",
+      },
       },
       "-=1"
     );
-    t1.from(".otherSkills h3", {
+    gsap.from(".otherSkills h3", {
       opacity: 0,
       duration: 0.9,
       stagger: 0.3,
-    }).from(
+      scrollTrigger: {
+        trigger: "#about",
+      },
+    })
+    gsap.from(
       ".otherSkills p",
       {
         y: 100,
         opacity: 0,
         duration: 0.9,
         stagger: 0.3,
+        scrollTrigger: {
+        trigger: "#about",
+      },
       },
       "-=1"
     );
