@@ -5,17 +5,18 @@ import Home from "./Components/Home";
 import About from "./Components/About/About";
 import Portfolio from "./Components/Portfolio";
 import Contact from "./Components/Contact";
+import { assets } from "./assets/assets";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <main className="w-[82%] m-auto min-h-screen">
+      <main className="w-[100%] min-h-screen" >
         <Header />
         <Home />
-        <About />
         <Portfolio />
+        <About />
         <Contact />
       </main>
     </>

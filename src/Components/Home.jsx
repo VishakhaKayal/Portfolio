@@ -2,73 +2,112 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { assets } from "../assets/assets.js";
 import "../App.css";
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Link } from "react-scroll";
 
 const Home = () => {
   useGSAP(() => {
-    gsap.from(".introsection h2", {
-      y:100,
-    opacity:0,
-    duration:1,
-    stagger:0.3
+    const t1 = gsap.timeline(); // Creating a timeline instance
+    t1.from(".tagline", {
+      y: -300,
+      duration: 0.8,
+      opacity: 0,
     });
+    t1.from(".secondText", {
+      width: "100%",
+      duration: 2,
+    });
+    t1.from(".knowmoreBtn", {
+     scale:0,
+      duration: 0.8,
+    });
+    t1.from(".logo",{
+      opacity:0,
+      x:80,
+    })
   });
   return (
-  <>
-  <div className="w-full h-screen flex items-center" id="home"> 
-    <div
-      style={{
-        filter: "drop-shadow(20px 4px 40px rgba(0, 0, 0, 0.25))",
-        backdropFilter: "blur(2.5px)",
-        
-      }}
-      className="text-white bg-[] w-full mt-[6rem] h-[calc(100vh-25vh)] flex gap-4 z-99 relative"
-    >
-     
-      <section style={{background: "linear-gradient(to right, #434343 0%, black 100%"}} className="introsection w-[60%] h-full flex flex-col justify-center border-[1px] rounded-lg border-[#464545a7] gap-5 relative pl-8">
-        <h2 className="font-[Roboto Mono] text-[#4a4a48] text-lg font-medium tracking-[2.56px]">
-          Hi, I am Vishakha
-        </h2>
-        <h2 className="font-[Poppins] text-[#fffff] text-7xl font-medium tracking-[1.26px] whitespace-nowrap">
-          FULLSTACK
-        </h2>
-        <h2 className="font-[Poppins] text-[#566246] text-7xl font-medium tracking-[2.56px]">
-          WEB DEVELOPER
-        </h2>
-      </section>
+    <>
+      <div
+        className="w-[100%] h-screen flex  items-center overflow-hidden"
+        id="home"
+        style={{
+          backgroundImage: `url(${assets.wallpapert})`,
+          objectFit: "cover",
+        }}
+      >
+        <div className="text-white  w-full mt-[2rem] h-[calc(100vh-25vh)] flex gap-4 z-99 relative md:pl-24">
+          <section className="introsection w-[100%] h-full  rounded-lg  gap-5  pl-8 relative flex flex-col">
+            {/* <div className="flex">
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                H
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                i
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                , I&nbsp;
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                am&nbsp;
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                V
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                i
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                s
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                h
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                a
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                k
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                h
+              </h3>
+              <h3 className="font-[Montserrat] text-[#4a4a48] text-2xl font-semibold tracking-[2.56px]">
+                a
+              </h3>
+            </div> */}
 
-      <section className="animationSection w-[40%] border-[1px] rounded-lg border-[#464545a7] relative"
-      style={{background:"radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%)",}}>
-      {/* <div className="bg-white w-full h-full absolute"></div> */}
-        <h3 className="reactIcon">
-          {" "}
-          <FaReact
-            style={{
-              fontSize: "13rem",
-              position: "absolute",
-              top: "30%",
-              left: "30%",
-            }}
-          />
-        </h3>
-        <h3 className="w-[4rem] h-[4rem] absolute top-[42%] left-10 animateIcons mongoicon">
-          <img src={assets.mongo} alt="" className="" />
-        </h3>
-        <h3 className="w-[4rem] h-[4rem] absolute top-[47%] right-5 animateIcons nodeicon">
-          <img src={assets.node} alt="" className="" />
-        </h3>
-        <h3 className="w-[4rem] h-[4rem] absolute top-[15%] left-[43%] animateIcons expressicon">
-          <img src={assets.express} alt="" className="" />
-        </h3>
-        <h3 className="w-[4rem] h-[4rem] absolute bottom-[10%] left-[45%] animateIcons tailwindicon">
-          <img src={assets.tailwind} alt="" className="" />
-        </h3>
-      </section>
-    </div>
+            <div className="tagline relative w-full md:w-[60%] top-[20%]">
+              <p className="font-[Montserrat] absolute text-5xl leading-[5rem] whitespace-nowrap font-bold tracking-[2.56px] text-[rgba(255,255,255,0.75)]">
+                Hi my name is <span>Vishakha</span>
+                <br />
+                I am an aspiring MERN Stack
+                <br />
+                Developer
+              </p>
+              <p className="secondText font-[Montserrat] overflow-hidden w-[0%] whitespace-nowrap absolute text-black opacity-[0.9] text-5xl leading-[5rem] font-bold tracking-[2.56px]">
+                Hi my name is <span>Vishakha</span>
+                <br />
+                I am an aspiring MERN Stack
+                <br />
+                Developer
+              </p>
+            </div>
 
-  </div>
-  </>
+            <div className="knowmoreBtn bottom-[40%] md:bottom-[20%] absolute bg-[rgba(255,255,255,0.75)] text-black rounded p-2 font-extrabold md:font-bold md:tracking-widest text-4xl md:text-lg">
+              {" "}
+              <Link to="about" smooth={true} duration={500}>
+                Know More
+              </Link>
+            </div>
+            <div className="logo absolute bottom-[0%] right-0 md:right-16">
+              <img src={assets.mernPhoto} alt="mern stack logo" className="w-[29rem] md:w-[18rem] " />
+            </div>
+          </section>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <>
       <ToastContainer />
-      <div className="w-full h-[100vh] flex items-center">
+      <div className="m-auto w-[82%] h-[100vh] flex items-center">
         <div
           className="text-white w-full h-[50vh]  flex flex-col items-center"
           id="contact"

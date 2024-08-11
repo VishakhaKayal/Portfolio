@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from 'react-scroll';
 import "../App.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -13,38 +13,46 @@ const Header = () => {
     });
   });
   return (
-    <div className=" nav fixed flex justify-end gap-8 top-2 right-[9%] width-full z-10">
+    <div className="nav fixed flex justify-end gap-8 top-2 right-[9%] width-full z-10">
       <h4 className="relative rounded-[50px]  border-[1px] border-[rgba(255,255,255,0.75)] pt-[1.3vh] pb-[1.3vh] pl-[1.3vw] pr-[1.3vw] cursor-pointer overflow-hidden">
-        <a
-          href="#home"
+      <Link
+          to="home"
+          smooth={true}
+          duration={500}
           className="font-medium text text-white relative z-[9] no-underline"
         >
           Home
-        </a>
+        </Link>
       </h4>
       <h4 className="relative rounded-[50px]  border-[1px] border-[rgba(255,255,255,0.75)] pt-[1.3vh] pb-[1.3vh] pl-[1.3vw] pr-[1.3vw] cursor-pointer overflow-hidden">
-        <a
-          href="#about"
+      <Link
+          to="about"
+          smooth={true}
+          duration={500}
           className="font-medium text text-white relative z-[9] no-underline"
         >
           About
-        </a>
+        </Link>
       </h4>
       <h4 className="relative rounded-[50px]  border-[1px] border-[rgba(255,255,255,0.75)] pt-[1.3vh] pb-[1.3vh] pl-[1.3vw] pr-[1.3vw] cursor-pointer overflow-hidden">
-        <a
-          href="#portfolio"
+      <Link
+          to="portfolio"
+          smooth={true}
+          duration={500}
           className="font-medium text text-white relative z-[9] no-underline"
         >
           MyWorks
-        </a>
+        </Link>
       </h4>
       <h4 className="relative rounded-[50px]  border-[1px] border-[rgba(255,255,255,0.75)] pt-[1.3vh] pb-[1.3vh] pl-[1.3vw] pr-[1.3vw] cursor-pointer overflow-hidden">
-        <a
-          href="#contact"
+      <Link
+          to="contact"
+          smooth={true}
+          duration={500}
           className="font-medium text text-white relative z-[9] no-underline"
         >
           Contact
-        </a>
+        </Link>
       </h4>
     </div>
   );

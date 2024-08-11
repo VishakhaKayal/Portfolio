@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../../assets/assets";
 import Education from "./Education";
 import Skills from "./Skills";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Heading from "../Heading";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const [section, setSection] = useState("");
+
   useGSAP(() => {
     gsap.from(".aboutmeContent", {
       opacity: 0,
-      duration: 0.3,
+      duration: 10,
       scrollTrigger: {
         trigger: "#about",
+        scrub: 1,
         // start: "top center",
       },
     });
@@ -24,18 +28,21 @@ const About = () => {
       scale: 0,
       scrollTrigger: {
         trigger: "#about",
+        scrub: 1,
         // end: "bottom center",
       },
     });
   });
 
-  const onHandleEducation = () => {};
+  const onHandleEducation = () => {
+    setSection("Education");
+  };
+  const onHandleSkills = () => {
+    setSection("Skills");
+  };
   return (
-    <div className="w-full h-screen flex items-center" id="about">
-      <div
-        className="text-white  w-full min-h-[calc(100vh-35vh)] md:h-[calc(100vh-35vh)] flex md:flex-row flex-col gap-4 z-99 relative"
-        
-      >
+    <div className="m-auto w-[82%]   h-screen flex items-center" id="about">
+      <div className="text-white  w-full min-h-[calc(100vh-35vh)] md:h-[calc(100vh-35vh)] flex md:flex-row flex-col gap-4 z-99 relative">
         <aside className="w-full md:w-[35%] h-full rounded-lg overflow-hidden">
           <img
             src={assets.girl}
@@ -44,7 +51,8 @@ const About = () => {
           />
         </aside>
         <aside className="w-full md:w-[65%] h-full pl-11 pt-3">
-          <h2 className="text-6xl md:text-5xl font-bold ">About Me</h2>
+          {/* <h2 className="text-6xl md:text-5xl font-bold ">About Me</h2> */}
+          <Heading sectionName="About" />
           <p className="aboutmeContent text-lg md:text-sm text-[#ffffff7d] mt-4 font-[Inter] tracking-wider">
             I’m a dedicated MERN Stack developer with a strong passion for
             crafting dynamic and innovative web applications. My journey into
@@ -58,7 +66,9 @@ const About = () => {
           </p>
           <div className="flex flex-col mt-4">
             <div className="flex  gap-5 font-[Poppins] tracking-wider font-semibold text-3xl md:text-lg">
-              <h4 className="border-[3px] border-[#000000] pb-1 border-b-[#1E2824] ">
+              <h4 className="border-[3px] border-[#000000] pb-1 border-b-[#1E2824] "
+               onClick={onHandleSkills}
+               >
                 Skills
               </h4>
               <h4
@@ -68,8 +78,7 @@ const About = () => {
                 Education
               </h4>
             </div>
-
-            <Skills />
+            {section === "Education" ? <Education /> : <Skills />}
           </div>
         </aside>
       </div>

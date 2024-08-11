@@ -4,8 +4,13 @@
   padding: 2rem;
  text-align: center; 
 } */
+html {
+  scroll-behavior: smooth;
+}
 
-
+/* body{
+  background-image: url('./assets/images/wallpaper.avif');
+} */
 /* Header Component hover css */
 .nav h4::after {
   content: "";
