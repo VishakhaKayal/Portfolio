@@ -49,7 +49,7 @@ const Home = () => {
                 <br />
                 Developer
               </p>
-              <p className="secondText font-[Montserrat] overflow-hidden w-[0%] whitespace-nowrap absolute text-black opacity-[0.9] leading-[7rem] text-6xl md:text-5xl md:leading-[5rem] font-bold tracking-[2.56px]">
+              <p className="secondText font-[Montserrat] overflow-hidden w-[0%] whitespace-nowrap absolute text-[#363636] leading-[7rem] text-6xl md:text-5xl md:leading-[5rem] font-bold tracking-[2.56px]">
                 Hi my name is <span>Vishakha</span>
                 <br />
                 I am an aspiring MERN Stack
