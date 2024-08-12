@@ -8,26 +8,26 @@ import { Link } from "react-scroll";
 
 const Home = () => {
   const taglineRef = useRef()
-  // useGSAP(() => {
-  //   const t1 = gsap.timeline(); // Creating a timeline instance
-  //   t1.from(taglineRef.current, {
-  //     y: -300,
-  //     duration: 0.8,
-  //     opacity: 0,
-  //   });
-  //   t1.from(".secondText", {
-  //     width: "100%",
-  //     duration: 4,
-  //   });
-  //   t1.from(".knowmoreBtn", {
-  //    scale:0,
-  //     duration: 0.8,
-  //   });
-  //   t1.from(".logo",{
-  //     opacity:0,
-  //     x:80,
-  //   })
-  // });
+  useGSAP(() => {
+    const t1 = gsap.timeline(); // Creating a timeline instance
+    t1.from(taglineRef.current, {
+      y: -300,
+      duration: 0.8,
+      opacity: 0,
+    });
+    t1.from(".secondText", {
+      width: "100%",
+      duration: 4,
+    });
+    t1.from(".knowmoreBtn", {
+     scale:0,
+      duration: 0.8,
+    });
+    t1.from(".logo",{
+      opacity:0,
+      x:80,
+    })
+  });
   return (
     <>
       <div
