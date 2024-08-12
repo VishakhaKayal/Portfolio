@@ -29,23 +29,7 @@
   body {
     font-size: 40%;
   }
-/* 
-  .introsection {
-    width: 100%;
-    position: absolute;
-    padding-left: 7rem;
-    border: none;
-    background-color: #000000;
-  }
-  .reactIcon{
-    display: none;
-  }
-  .animationSection {
-    position: relative;
-    border: none;
-    width: 100%;
-    z-index: 20;
-  } */
+
 
 }
 
@@ -56,21 +40,7 @@
     font-size: 50%;
   }
 
-  .reactIcon {
-    font-size: 10rem;
-  }
 
-  .tailwindicon {
-    bottom: 25%;
-  }
-
-  .nodeicon {
-    top: 43%;
-    right: 0;
-  }
-  .mongoicon{
-    left:0;
-  }
 }
 
 /* Add this to your CSS file */

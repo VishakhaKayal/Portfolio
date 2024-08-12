@@ -8,26 +8,26 @@ import { Link } from "react-scroll";
 
 const Home = () => {
   const taglineRef = useRef()
-  useGSAP(() => {
-    const t1 = gsap.timeline(); // Creating a timeline instance
-    t1.from(taglineRef.current, {
-      y: -300,
-      duration: 0.8,
-      opacity: 0,
-    });
-    t1.from(".secondText", {
-      width: "100%",
-      duration: 4,
-    });
-    t1.from(".knowmoreBtn", {
-     scale:0,
-      duration: 0.8,
-    });
-    t1.from(".logo",{
-      opacity:0,
-      x:80,
-    })
-  });
+  // useGSAP(() => {
+  //   const t1 = gsap.timeline(); // Creating a timeline instance
+  //   t1.from(taglineRef.current, {
+  //     y: -300,
+  //     duration: 0.8,
+  //     opacity: 0,
+  //   });
+  //   t1.from(".secondText", {
+  //     width: "100%",
+  //     duration: 4,
+  //   });
+  //   t1.from(".knowmoreBtn", {
+  //    scale:0,
+  //     duration: 0.8,
+  //   });
+  //   t1.from(".logo",{
+  //     opacity:0,
+  //     x:80,
+  //   })
+  // });
   return (
     <>
       <div
@@ -42,14 +42,14 @@ const Home = () => {
           <section className="introsection w-[100%] h-full  rounded-lg  gap-5  pl-8 relative flex flex-col">
           
             <div className="tagline relative w-full md:w-[60%] top-[20%]" ref={taglineRef}>
-              <p className="font-[Montserrat] absolute leading-[7rem] text-6xl md:text-5xl md:leading-[5rem] whitespace-nowrap font-bold tracking-[2.56px] text-[rgba(255,255,255,0.75)]">
+              <p className="font-[Montserrat] absolute leading-[7rem] text-6xl md:text-5xl md:leading-[5rem] whitespace-nowrap font-bold md:tracking-[2.56px] text-[rgba(255,255,255,0.75)] tracking-tighter ">
                 Hi my name is <span className="text-[#5d3c18]">Vishakha</span>
                 <br />
                 I am an aspiring MERN Stack
                 <br />
                 Developer
               </p>
-              <p className="secondText font-[Montserrat] overflow-hidden w-[0%] whitespace-nowrap absolute text-[#363636] leading-[7rem] text-6xl md:text-5xl md:leading-[5rem] font-bold tracking-[2.56px]">
+              <p className="secondText font-[Montserrat] overflow-hidden w-[0%] whitespace-nowrap absolute text-[#363636] leading-[7rem] text-6xl md:text-5xl md:leading-[5rem] font-bold md:tracking-[2.56px] tracking-tighter ">
                 Hi my name is <span>Vishakha</span>
                 <br />
                 I am an aspiring MERN Stack
@@ -58,7 +58,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="cursor-pointer knowmoreBtn bottom-[40%] md:bottom-[20%] absolute bg-[#5d3c18]  rounded p-2 font-extrabold md:font-bold md:tracking-widest text-4xl md:text-lg ">
+            <div className="cursor-pointer knowmoreBtn bottom-[30%] md:bottom-[20%] absolute bg-[#5d3c18]  md:rounded md:p-2 font-extrabold md:font-bold md:tracking-widest  p-3 rounded-xl text-[2.6rem] md:text-lg ">
               {" "}
               <Link to="about" smooth={true} duration={500} >
                 Know More

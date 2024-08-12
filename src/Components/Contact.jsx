@@ -55,7 +55,7 @@ const Contact = () => {
       <div className="m-auto w-[82%] h-[100vh] flex flex-col md:flex-row items-center contactSec" id="contact">
         <section  className="text-white w-[70%] md:w-[40%] h-[70vh]  flex flex-col items-center relative z-10 firstSec">
           <img src={assets.contactMe} alt="contact image" className="w-full h-[90%] md:w-[100%] md:h-[100%] pt-14 absolute top-0"/>
-          <div className="bg-black opacity-[0.2] absolute top-0 z-40 w-full h-full"></div>
+          <div className="bg-black opacity-[0.2] absolute top-32 z-40 w-full h-[60%]"></div>
         </section>
         <section
           className="text-white w-full md:w-[70%] h-[50vh]  flex flex-col items-center"
