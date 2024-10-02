@@ -59,7 +59,7 @@ const Contact = () => {
         </section>
         <section
           className="text-white w-full md:w-[70%] h-[50vh]  flex flex-col items-center"
-        
+          
         >
           <div className="w-full mb-4 flex flex-col items-center justify-center">
             {/* <h3 className="text-5xl font-semibold md:font-normal mb-3 md:mb-0 md:text-3xl font-[Poppins]">Contact Me</h3>

@@ -19,6 +19,7 @@ import wallpapert from "./images/wallpaper2.avif";
 import wallpapertt from "./images/wallpaper3.avif";
 import mernPhoto from "./images/mernPhoto.png";
 import contactMe from "./images/contactMe.png"
+import betterhelphomepage from "./images/betterhelphomepage.png"
 
 export const assets = {
   gitHubIcon,
@@ -42,8 +43,19 @@ export const assets = {
 };
 
 export const myWorks = [
+  
   {
     id: 0,
+    category: "frontend project",
+    name: "Better Help Clone",
+    image: betterhelphomepage,
+    hostlink: "https://better-help-clone.vercel.app/",
+    description:
+      "Cloned a responsive homepage of the betterHelp website using tailwindcss for dynamic styling and gsap for animations . By combining TailwindCSS for styling and GSAP for animations, I was able to replicate the look and feel of the BetterHelp homepage while ensuring it remained responsive across different devices.",
+      techStack:['nodejs','reactjs','tailwind','gsap']
+  },
+  {
+    id: 1,
     category: "backend project",
     name: "Event Planner 360",
     image: event,
@@ -53,7 +65,7 @@ export const myWorks = [
       techStack:['reactjs','expressjs','mongoose','nodejs','tailwind']
   },
   {
-    id: 1,
+    id: 2,
     category: "backend project",
     name: "Student Project Hub",
     image: sph,
@@ -63,27 +75,7 @@ export const myWorks = [
       techStack:['html','css','js','ejs','expressjs','mongoose','reactjs',"tailwind"]
   },
   {
-    id: 2,
-    category: "backend project",
-    name: "Pinterest",
-    image: pinterest,
-    hostlink: "https://backendpinterest.onrender.com/",
-    description:
-      "First project of learning backend . Implemented user authentication, added functionality for creating posts . Incorporated features for displaying feeds using the advanced Node.js library Express.js along with EJS for dynamic frontend rendering.",
-      techStack:['expressjs','mongoose','nodejs','html','css','js','ejs']
-  },
-  {
     id: 3,
-    category: "frontend project",
-    name: "Across The Globe",
-    image: atg,
-    hostlink: "https://assignment-atg.onrender.com/",
-    description:
-      "I utilized React.js to develop a user interface for an assignment from ATG Globe. The project integrates responsive design principles and leverages React's component-based architecture to enhance usability and functionality.",
-      techStack:['nodejs','reactjs','tailwind']
-  },
-  {
-    id: 4,
     category: "frontend project",
     name: "Chokha Punjab Clone",
     image: punjab,
@@ -92,9 +84,8 @@ export const myWorks = [
       "Developing a responsive and interactive clone of the Chokha Punjab website. Current Progress: Home Page: Implemented a visually appealing and responsive homepage using ReactJS and TailwindCSS. Animations: Integrated smooth animations on the homepage using GSAP for enhanced user experience. Next Steps: complete the project",
       techStack:['nodejs','reactjs','tailwind','gsap']
   },
-
   {
-    id: 6,
+    id: 4,
     category: "Figma Design",
     name: "Student Project Hub Design",
     image: figma,
@@ -104,4 +95,15 @@ export const myWorks = [
       "Created a comprehensive UI design using Figma for a platform that enables universities to upload and showcase their projects. This platform fosters collaboration, increases project recognition, and provides a space for users to explore and engage with inspiring projects.",
       techStack:['figma']
   },
+  {
+    id: 5,
+    category: "frontend project",
+    name: "Across The Globe",
+    image: atg,
+    hostlink: "https://assignment-atg.onrender.com/",
+    description:
+      "I utilized React.js to develop a user interface for an assignment from ATG Globe. The project integrates responsive design principles and leverages React's component-based architecture to enhance usability and functionality.",
+      techStack:['nodejs','reactjs','tailwind']
+  },
+ 
 ];
