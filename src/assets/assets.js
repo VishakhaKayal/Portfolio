@@ -49,7 +49,7 @@ export const myWorks = [
     category: "frontend project",
     name: "Better Help Clone",
     image: betterhelphomepage,
-    hostlink: "https://better-help-clone.vercel.app/",
+    hostlink: "https://betterhelpclone.onrender.com/",
     description:
       "Cloned a responsive homepage of the betterHelp website using tailwindcss for dynamic styling and gsap for animations . By combining TailwindCSS for styling and GSAP for animations, I was able to replicate the look and feel of the BetterHelp homepage while ensuring it remained responsive across different devices.",
       techStack:['nodejs','reactjs','tailwind','gsap']
