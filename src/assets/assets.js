@@ -43,19 +43,9 @@ export const assets = {
 };
 
 export const myWorks = [
-  
+
   {
     id: 0,
-    category: "frontend project",
-    name: "Better Help Clone",
-    image: betterhelphomepage,
-    hostlink: "https://betterhelpclone.onrender.com/",
-    description:
-      "Cloned a responsive homepage of the betterHelp website using tailwindcss for dynamic styling and gsap for animations . By combining TailwindCSS for styling and GSAP for animations, I was able to replicate the look and feel of the BetterHelp homepage while ensuring it remained responsive across different devices.",
-      techStack:['nodejs','reactjs','tailwind','gsap']
-  },
-  {
-    id: 1,
     category: "backend project",
     name: "Event Planner 360",
     image: event,
@@ -65,7 +55,7 @@ export const myWorks = [
       techStack:['reactjs','expressjs','mongoose','nodejs','tailwind']
   },
   {
-    id: 2,
+    id: 1,
     category: "backend project",
     name: "Student Project Hub",
     image: sph,
@@ -75,7 +65,7 @@ export const myWorks = [
       techStack:['html','css','js','ejs','expressjs','mongoose','reactjs',"tailwind"]
   },
   {
-    id: 3,
+    id: 2,
     category: "frontend project",
     name: "Chokha Punjab Clone",
     image: punjab,
@@ -85,7 +75,7 @@ export const myWorks = [
       techStack:['nodejs','reactjs','tailwind','gsap']
   },
   {
-    id: 4,
+    id: 3,
     category: "Figma Design",
     name: "Student Project Hub Design",
     image: figma,
@@ -96,7 +86,7 @@ export const myWorks = [
       techStack:['figma']
   },
   {
-    id: 5,
+    id: 4,
     category: "frontend project",
     name: "Across The Globe",
     image: atg,
